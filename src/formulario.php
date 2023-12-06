@@ -1,9 +1,13 @@
 <?php
 // Verificar si la solicitud es POST
 
-echo "deperdido";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["pregunta_1"]) && isset($_POST["pregunta_2"]) && isset($_POST["pregunta_3"]) && isset($_POST["pregunta_4"]) && isset($_POST["pregunta_5"] )&& isset($_POST["nombre"])) {
+        session_start();
+        
+        $_SESSION["nombre"] = $_POST["nombre"];
+
         $respuestas_usuarios=[
             1=>$_POST["pregunta_1"],
             2=>$_POST["pregunta_2"],
@@ -18,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Grasa"=>3
             
         ];
+        
         
         $c_piel_seca=0;
         $c_piel_mixta=0;
@@ -49,13 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ];
         $tipo_piel_usuario=array_search(max($resultado),$resultado);
 
-        echo "tu tipo de piel fue: $tipo_piel_usuario ";
-
-
-
-        echo max($resultado);
-        
+       
     }   
 }
-include("registros.php");
+include("../registros.php");
+
 ?>

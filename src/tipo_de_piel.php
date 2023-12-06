@@ -1,25 +1,27 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luz de Luna - Inicio</title>
-    
+    <title>Luz de Luna - Tipo de Piel</title>
     
     <link rel="stylesheet" href="/dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
+    
     <link rel="icon" href="../icons/logoBgBlack.svg" type="image/png">
+    
+  
     
     <style>
 
-        body{
+body{
             margin: 0;
             padding: 0;
             background: url('/img/a.webp') ;
@@ -37,41 +39,20 @@
             font-family: 'Kaushan Script', cursive;
                 }
 
-        
-
 
         .div_img{
-            background: url('/img/zyro-image.webp') ;
+            background: url('/img/zyro-image.png') ;
             
             background-size: 100% 100%;
             background-repeat: no-repeat;
             
-            height:100%;
+            height: 50vh;
             width: 100%;
             margin-bottom: 10rem;
 
             box-shadow: 0 3px 10px rgb(0,0,0,0.2);
             
             
-        }
-        @media (max-width:767px) {
-          .div_img{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column; 
-                
-                
-                
-            }
-          .div_img p {
-            width: 80%;
-            padding-bottom: 10px;
-          }
-          .div_img p::first-letter{
-            font-size: 1.1rem;
-          }
-          
         }
 
         @media (min-width:768px) {
@@ -100,7 +81,13 @@
               width: 85%;
               
             }
-           
+            .secciones{
+                width: 85%;
+                display: grid;
+                grid-template-columns:repeat(2,1fr) ;
+
+                
+            }
                
             .sombra:hover{
                 cursor: pointer;
@@ -137,7 +124,13 @@
               width: 85%;
               
             }
-           
+            .secciones{
+                width: 60%;
+                display: grid;
+                grid-template-columns:repeat(2,1fr) ;
+
+                
+            }
                
             .sombra:hover{
                 cursor: pointer;
@@ -175,7 +168,13 @@
               width: 85%;
               
             }
-          
+            .secciones{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 90%;
+                
+            }
                
             .sombra:hover{
                 cursor: pointer;
@@ -188,13 +187,47 @@
             .div_img{
                 height: 420px;
             }
-          
+            .secciones{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,1fr);  
+            }
             .sec_1{
               display: flex;
               
             }
 
-           
+            .img_section:hover{
+                background-image:
+                
+                radial-gradient(circle, rgba(0,0,0,.50) 0%, rgb(0, 0, 0,0) 100%),
+                
+                url('https://hips.hearstapps.com/hmg-prod/images/flawlessskin-1589384044.png?crop=0.5xw:1xh;center,top&resize=640:*');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            
+            .img_section_2:hover{
+                
+                background-image:
+    
+                radial-gradient(circle, rgba(0,0,0,.50) 0%, rgb(0, 0, 0,0) 100%),
+    
+                url('https://cdn.shopify.com/s/files/1/0061/5347/0019/files/shutterstock_1516505810_1024x1024.jpg?v=1626868511');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                
+            }
+            .img_section_3:hover{
+                background-image:
+    
+                radial-gradient(circle, rgba(0,0,0,.50) 0%, rgb(0, 0, 0,0) 100%),
+    
+                url('https://rachelmkpartist.files.wordpress.com/2018/01/tipos-de-piel.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
             
             
             
@@ -210,7 +243,7 @@
             
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
             
-            url('../img/section_1.webp');
+            url('https://hips.hearstapps.com/hmg-prod/images/flawlessskin-1589384044.png?crop=0.5xw:1xh;center,top&resize=640:*');
             background-repeat: no-repeat;
             background-size: 100% 100%;
 
@@ -226,7 +259,7 @@
             
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
             
-            url('../img/section_2.webp');
+            url('https://cdn.shopify.com/s/files/1/0061/5347/0019/files/shutterstock_1516505810_1024x1024.jpg?v=1626868511');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: .75rem .75rem 0 0;
@@ -238,7 +271,7 @@
 
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
 
-            url('../img/section_3.webp');
+            url('https://rachelmkpartist.files.wordpress.com/2018/01/tipos-de-piel.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: .75rem .75rem 0 0;
@@ -272,31 +305,13 @@
             border-bottom:1px solid black ;
         }
 
-        @media (min-width:768px) {
-          .imagen_text{
-            width: 75%; 
-                       
-          }
-        }
-
-        @media (min-width:1024px) {
-          .imagen_text{
-            width: 50%; 
-                       
-          }
-        }
-        
         
 
         
-
-        
-            
-            
     </style>
 </head>
-<body class="">
-    <header class="">
+<body >
+<header class="">
         
         <div class="bg-black/90 relative ">
           <span class="  text-white hidden marca  justify-center items-center  cursor-pointer text-xl   font-bold  " onclick="window.location.href='index_2.html'" >Luz de Luna</span>
@@ -339,8 +354,8 @@
 
             <nav class="bg-white border-b-1 p-4 w-full ">
                 <ul class="grid justify-center text-center gap-5 md:flex md:justify-evenly ">
-                    <li><a class="activo hover:font-bold hover:bg-black/10 hover:p-1.5 hover:rounded-sm transition-all duration-200 " href="#">Inicio</a></li>
-                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="test.html">Saber tipo de piel</a></li>
+                    <li><a class=" hover:font-bold hover:bg-black/10 hover:p-1.5 hover:rounded-sm transition-all duration-200 " href="index_2.html">Inicio</a></li>
+                    <li><a class="activo hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="test.html">Saber tipo de piel</a></li>
                     <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="Contactanos.html">Contactanos</a></li>
                 </ul>
             </nav>
@@ -349,54 +364,152 @@
         
      
     </header>
-    <main class="mt-5">
-        <section class=" animate-fade-up">
-            <h2 class="text-center font-bold text-2xl mb-8">Productos</h2>
+
+    <main>
+
     
-            <div class="w-11/12 mx-auto flex flex-col gap-8  responsivo ">
-             
-                <div class="bg-white p-4 md:p-8 rounded-lg flex flex-col">
-                    <h3 class="py-2 text-center font-semibold">Gel Facial Hidratante Para Piel Grasa</h3>
-                    <img class="animate-fade-up animate-delay-200 rounded-xl  mb-4" src="../img/GelPielGrasa.webp" alt="GelPielGrasa">
-                    <div class="bg-black text-white p-4 rounded-lg">
-                        <p class="mb-4 font-semibold">Gel Hidratante para piel grasa esta diseñado para hidratar esps rostros brillosos que tambien requieren una buena hidratación, creado con ingredientes organicos como agua de rosas, gel de aloe vera y vitamina E</p>
-                        <p>Con un precio <span class="font-bold text-yellow-400">$120</span></p>
-                    </div>
-                </div>
-             
-                <div class="bg-white p-4 md:p-8 rounded-lg flex flex-col">
-                    <h3 class="py-2 text-center font-semibold">Crema Facial Hidratante Para Piel Seca</h3>
-                    <img class="animate-fade-up animate-delay-200 rounded-xl w-full mb-4" src="../img/CremaPielSeca.webp" alt="GelPielGrasa">
-                    <div class="bg-black text-white p-4 rounded-lg">
-                        <p class="mb-4 font-semibold">Crema hidratante a base de aceites para piel seca fue creado para mantener a esas pieles escamosas y secas bien hidratadas con ingredientes aceitodos que son ideales para este tipo de pieles como lo es la manteca de karité y aceites de aguacate y vitamina E. Manten tu rostro sin descamacion e hidratado <p>Con un precio <span class="font-bold text-yellow-400">$120</span></p></p>
-                    </div>
-                </div>
+
+    <?php 
+      isset($_SESSION['respuesta']) ? $tipo_de_piel = $_SESSION['respuesta'] : $tipo_de_piel = ''; 
+
+      isset($_SESSION['nombre']) ? $nombre = $_SESSION['nombre'] : $nombre = ''; 
+      
+      ?>
+
+
+
     
+        <h2>
             
-             
-            </div>
-        </section>
+
+            <?php 
+
+                
+
+                
+                switch ($tipo_de_piel) {
+                    case 'Seca':
+
+                        echo
+                        
+                        '
+                        
+
+                        <h2 class="flex flex-col gap-2 text-center font-bold mt-5" >
+                        <span style="color: red;" class=" ">
+                            Gracias por llenar el formulario
+                        </span>
+                        '.$nombre.', Tu tipo de piel fue: Seca
+                    </h2>
+
+                    <div class="w-11/12  mx-auto flex flex-col gap-8  responsivo ">
+                        
+               
+                        <div class="bg-white mt-5 p-4 md:p-8 rounded-lg flex flex-col">
+                            <h3 class="py-2 text-center font-semibold flex flex-col"><span>Te recomendamos  </span>Crema Facial Hidratante Para Piel Seca</h3>
+                            <img class="animate-fade-up animate-delay-200 rounded-xl w-full mb-4" src="../img/CremaPielSeca.webp" alt="GelPielGrasa">
+                            <div class="bg-black text-white p-4 rounded-lg">
+                                <p class="mb-4 font-semibold">Crema hidratante a base de aceites para piel seca fue creado para mantener a esas pieles escamosas y secas bien hidratadas con ingredientes aceitodos que son ideales para este tipo de pieles como lo es la manteca de karité y aceites de aguacate y vitamina E. Manten tu rostro sin descamacion e hidratado <p>Con un precio <p>Con un precio <span class="font-bold text-yellow-400">$120</span></p></p>
+                            </div>
+                        </div>
+                           
+
+                    
+                       
+                       
+                        ';
+
+                        
+                        break;
+
+
+                    case 'Grasa':
+
+                        echo
+                        
+                        '
+                        <h2 class="flex flex-col gap-2 text-center font-bold mt-5" >
+                        <span style="color: red;" class=" ">
+                            Gracias por llenar el formulario
+                        </span>
+                        '.$nombre.', Tu tipo de piel fue: Grasa
+                    </h2>
+            
+            
+                    <div class="w-11/12  mx-auto flex flex-col gap-8  responsivo ">
+                        
+               
+                        <div class="bg-white mt-5 p-4 md:p-8 rounded-lg flex flex-col">
+                            <h3 class=" py-2 text-center font-semibold flex flex-col"><span>Te recomendamos  </span>Gel Facial Hidratante Para Piel Grasa</h3>
+                            <img class="animate-fade-up animate-delay-200 rounded-xl w-full mb-4" src="../img/GelPielGrasa.webp" alt="GelPielGrasa">
+                            <div class="bg-black text-white p-4 rounded-lg">
+                                <p class="mb-4 font-semibold">Gel Hidratante para piel grasa esta diseñado para hidratar esps rostros brillosos que tambien requieren una buena hidratación, creado con ingredientes organicos como agua de rosas, gel de aloe vera y vitamina E <p>Con un precio <span class="font-bold text-yellow-400">$120</span></p></p>
+                            </div>
+                        </div>
+                       
+                        ';
+
+
+
+                        
+                        break;
+                    case 'Mixta':
+                        echo
+                        
+                        '
+                        <h2 class="flex flex-col gap-2 text-center font-bold mt-5" >
+                        <span style="color: red;" class=" ">
+                            Gracias por llenar el formulario
+                        </span>
+                        '.$nombre.', Tu tipo de piel fue: Mixta
+                    </h2>
+            
+            
+                    <<div class="w-11/12  mx-auto flex flex-col gap-8  responsivo ">
+                        
+               
+                        <div class="bg-white mt-5 p-4 md:p-8 rounded-lg flex flex-col">
+                            <h3 class="py-2 text-center font-semibold flex flex-col"><span>Te recomendamos  </span>Gel Facial Hidratante Para Piel Grasa</h3>
+                            <img class="animate-fade-up animate-delay-200 rounded-xl w-full mb-4" src="../img/GelPielGrasa.webp" alt="GelPielGrasa">
+                            <div class="bg-black text-white p-4 rounded-lg">
+                                <p class="mb-4 font-semibold">Gel Hidratante para piel grasa esta diseñado para hidratar esps rostros brillosos que tambien requieren una buena hidratación, creado con ingredientes organicos como agua de rosas, gel de aloe vera y vitamina E <p>Con un precio <span class="font-bold text-yellow-400">$120</span></p></p>
+                            </div>
+                        </div>
+                           
+                        ';
+                        break;
+                    case '':
+                        echo 'llene el formulario';
+
+                        
+                        break;
+
+
+
+                    
+                    }
+
+
+            ?>
+
+        </h2>
+
     </main>
     
-    
-        <footer class="py-5 mt-10 text-center bg-white/80">
-            <p class="font-bold">©Derechos reservados</p>
-            
-        </footer>
-</body>
+    <footer class="py-5 mt-10 text-center bg-white/80">
+        <p class="font-bold">©Derechos reservados</p>
+        
+    </footer>
 
-
-<style>
-    @media (min-width: 748px) {
+    <style>
+           @media (min-width: 748px) {
         .responsivo{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            width: 91%;
+           
+            width: 40%;
             margin: auto;
         }
     }
-</style>
-
-
+    </style>
+</body>
 </html>
-

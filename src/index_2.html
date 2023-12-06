@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luz de Luna - Inicio</title>
+    
     
     <link rel="stylesheet" href="/dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-  
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <link rel="icon" href="../icons/logoBgBlack.svg" type="image/png">
     
     <style>
 
         body{
             margin: 0;
             padding: 0;
-            background: url('/img/a.png') ;
+            background: url('/img/a.webp') ;
             background-size: cover;
             background-repeat: no-repeat;
 
@@ -32,14 +37,16 @@
             font-family: 'Kaushan Script', cursive;
                 }
 
+        
+
 
         .div_img{
-            background: url('/img/zyro-image.png') ;
+            background: url('/img/zyro-image.webp') ;
             
             background-size: 100% 100%;
             background-repeat: no-repeat;
             
-            height: 50vh;
+            height:100%;
             width: 100%;
             margin-bottom: 10rem;
 
@@ -47,9 +54,60 @@
             
             
         }
+        @media (max-width:767px) {
+          .div_img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; 
+                
+                
+                
+            }
+          .div_img p {
+            width: 80%;
+            padding-bottom: 10px;
+          }
+          .div_img p::first-letter{
+            font-size: 1.1rem;
+          }
+          
+        }
 
-        @media (max-width:768px){
-            .nav{
+        @media (min-width:768px) {
+          .nav{
+                display: flex;
+                
+            }
+
+            .nav_h1{
+                
+                display: grid;
+                grid-template-columns: .25fr .75fr;
+                
+
+            }
+            .c{
+                width: 100%;
+            }
+            .sec_1{
+              display: flex;
+              justify-content: center;
+              gap: 0;
+              
+            }
+            .sec_1>div{
+              width: 85%;
+              
+            }
+           
+               
+        
+
+          }
+
+          @media (min-width:1440px) {
+          .nav{
                 display: flex;
             }
 
@@ -63,14 +121,61 @@
             .c{
                 width: 100%;
             }
+            .sec_1{
+              display: flex;
+              justify-content: center;
+              gap: 0;
+              
+            }
+            .sec_1>div{
+              width: 85%;
+              
+            }
+           
+               
+            
+                
+
+          }
+        
+        @media (max-width:767px){
+            .nav{
+                display: flex;
+                width: 90%;
+            }
+
+            .nav_h1{
+                
+                display: grid;
+                grid-template-columns: .25fr .75fr;
+                
+
+            }
+            .c{
+                width: 100%;
+            }
+            .sec_1{
+              display: flex;
+              justify-content: center;
+              gap: 0;
+              
+            }
+            .sec_1>div{
+              width: 85%;
+              
+            }
+          
+               
+            
         }
-        @media (min-width:768px) {
+        @media (min-width:770px) {
             .div_img{
                 height: 420px;
             }
-            .secciones{
-                grid-template-columns: repeat(2,1fr);
-                grid-template-rows: repeat(2,1fr);  
+          
+            .sec_1{
+              display: flex;
+              
             }
 
             .img_section:hover{
@@ -105,27 +210,21 @@
                 background-size: 100% 100%;
             }
             
-            .sombra:hover{
-                cursor: pointer;
-                transition: all 300ms;
-                width: 43%;
-                box-shadow: 4px 8.0px 8.0px rgba(0,0,0,0.38);
-            }
+            
             
         .nav{
             display: grid;
             grid-template-columns: .25fr .65fr .20fr;
         }
-
-
-            
+ 
         }
+
         .img_section{
             background-image:
             
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
             
-            url('https://hips.hearstapps.com/hmg-prod/images/flawlessskin-1589384044.png?crop=0.5xw:1xh;center,top&resize=640:*');
+            url('../img/section_1.webp');
             background-repeat: no-repeat;
             background-size: 100% 100%;
 
@@ -141,7 +240,7 @@
             
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
             
-            url('https://cdn.shopify.com/s/files/1/0061/5347/0019/files/shutterstock_1516505810_1024x1024.jpg?v=1626868511');
+            url('../img/section_2.webp');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: .75rem .75rem 0 0;
@@ -153,7 +252,7 @@
 
             radial-gradient(circle, rgba(0,0,0,.25) 0%, rgb(0, 0, 0,0) 100%),
 
-            url('https://rachelmkpartist.files.wordpress.com/2018/01/tipos-de-piel.jpg');
+            url('../img/section_3.webp');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: .75rem .75rem 0 0;
@@ -163,6 +262,48 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+        @media (max-width:550px){
+          .marca{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin-top: 1.6rem;
+            
+            
+          }
+
+        }
+
+        @media (min-width:551px){
+          .marcamd{
+            display: flex;
+          }
+        }
+        
+        .activo{
+            padding-bottom: 5px;
+            border-bottom:1px solid black ;
+        }
+
+        @media (min-width:768px) {
+          .imagen_text{
+            width: 75%; 
+                       
+          }
+        }
+
+        @media (min-width:1024px) {
+          .imagen_text{
+            width: 50%; 
+                       
+          }
+          
+        }
+        
+        
+
+        
 
         
             
@@ -170,19 +311,20 @@
     </style>
 </head>
 <body class="">
-    <header>
+    <header class="">
         
-        <div class="bg-black/90">
+        <div class="bg-black/90 relative ">
+          <span class="  text-white hidden marca  justify-center items-center  cursor-pointer text-xl   font-bold  " onclick="window.location.href='index_2.html'" >Luz de Luna</span>
 
-            <div class=" nav  max-h-20 h-20 md:max-h-32 md:max-w-full md:h-32  text-white  ">
+            <div class=" nav  max-h-20 h-20 md:max-h-32 md:max-w-full md:h-32  text-white relative ">
     
-                <h1 class="animate-fade-right animate-once animate-duration-[1300ms] nav_h1 flex w-full md:w-full md:max-h-32 ">
-                    <img src="/icons/logo.svg" onclick="window.location.href='index_2.html'" class="cursor-pointer max-h-20 h-20 md:max-h-32 md:h-32  " alt="" srcset="">
-                    <span class="flex c text-center tracking-widest  items-center text-xl justify-center  font-bold">Luz de Luna</span>
+                <h1 class="animate-fade-right animate-once animate-duration-[500ms] nav_h1 flex w-full md:w-full md:max-h-32 ">
+                    <img src="../icons/logo.svg" height="80px" width="80px" onclick="window.location.href='index_2.html'" class="cursor-pointer max-h-20 h-20 md:max-h-32 md:h-32  " alt="" srcset="">
+                    <span class="marcamd hidden text-white   items-center  cursor-pointer text-xl   font-bold  " onclick="window.location.href='index_2.html'" >Luz de Luna</span>
+                    
+                  </h1>
     
-                </h1>
-    
-                <div class="animate-fade-down animate-once animate-duration-[1300ms] hidden md:text-lg md:tracking-widest md:font-thin md:flex  md:items-center md:justify-center">
+                <div class="animate-fade-down animate-once animate-duration-[500ms] hidden md:text-lg md:tracking-widest md:font-thin md:flex  md:items-center md:justify-center">
                     <h2 class="md:flex hidden">
                         Inicio
                     </h2>
@@ -190,27 +332,31 @@
                     <h2 class="  tracking-widest md:hidden items-center justify-center text-xl font-bold">Luz de Luna</h2>
     
                 </div>
-    
-                <div class="animate-fade-left animate-once animate-duration-[1300ms] flex items-center w-5/12 md:w-full  justify-evenly">
-                    <a href="index.php" class="md:hover:text-xl md:transition-all">
-    
-                        <svg class="fill-white hover:fill-red-600 md:hover:w-9 md:hover:h-9 transition-all duration-300" width="34px" height="34px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z" ></path> </g></svg>
-                    </a>
-                    <a class="block text-2xl text-white" href="test.php" class="hover:text-xl transition-all">
-    
-                        <svg class="fill-white hover:fill-blue-600 hover:w-9 hover:h-9 transition-all duration-300" fill="#ffffff" width="34px" height="34px" viewBox="0 0 24 24" id="facebook" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z" ></path></g></svg>
-                        
-                    </a>
+
+                <div class="flex  justify-end w-full">
+                  
+                  <div class=" animate-fade-left animate-once animate-duration-[500ms] flex items-center w-5/12 md:w-full  justify-evenly gap-5 ">
+                      <a  target="_blank"  href="https://instagram.com/luzdeluna_oficial2023?igshid=OGQ5ZDc2ODk2ZA==" class="md:hover:text-xl md:transition-all">
+      
+                          <svg class="fill-white hover:fill-red-600 md:hover:w-9 md:hover:h-9 transition-all duration-300" width="26px" height="26px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z" ></path> </g></svg>
+                      </a>
+                      <a  target="_blank" class="block text-2xl text-white" href="https://www.facebook.com/profile.php?id=61553982506277&mibextid=gik2fB" class="hover:text-xl transition-all">
+      
+                          <svg class=" fill-white hover:fill-blue-600 hover:w-9 hover:h-9 transition-all duration-300" fill="#ffffff" width="24px" height="24px" viewBox="0 0 24 24" id="facebook" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z" ></path></g></svg>
+                          
+                      </a>
+                  </div>
+      
                 </div>
-    
+                
     
             </div>
 
-            <nav class="bg-white border-b-1 p-4  ">
-                <ul class=" flex justify-between md:justify-evenly">
-                    <li><a class=" hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="#">Inicio</a></li>
+            <nav class="bg-white border-b-1 p-4 w-full ">
+                <ul class="grid justify-center text-center gap-5 md:flex md:justify-evenly ">
+                    <li><a class="activo hover:font-bold hover:bg-black/10 hover:p-1.5 hover:rounded-sm transition-all duration-200 " href="#">Inicio</a></li>
                     <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="test.html">Saber tipo de piel</a></li>
-                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="#">Acerca de nosotros</a></li>
+                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="Contactanos.html">Contactanos</a></li>
                 </ul>
             </nav>
 
@@ -223,15 +369,16 @@
 
     <main class=" ">
         
-        <div class=" flex   mx-auto ">
-            <section class="animate-fade-down animate-once animate-delay-[900ms] div_img  w-full rounded-b-md  mx-auto  p-5 ">
+        <div class="  w-full h-full   mx-auto ">
+            <section class="animate-fade-down animate-once animate-delay-[400ms] div_img  w-full rounded-b-md  mx-auto  p-5 ">
 
-                <div class="h-full  flex flex-col md:p-10 p-5  justify-center  md:mx-8">
+                <div class=" h-full imagen_text flex  flex-col md:p-10   justify-center  md:mx-8">
                     <h2 class="font-medium  mb-5">
                         Acerca de Luz de Luna
                     </h2>
 
-                    <p class="font-serif  md:w-1/4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta cum consectetur, obcaecati omnis placeat eos ullam natus eaque. Placeat doloremque, dolores dolor alias esse ea officia impedit quod in.</p>
+                    <p class="font-serif ">Luz de luna es una empresa de cuidado facial está comprometida con el cliente para entregarle productos orgánicos que se adaptan a las necesidades alternas que la piel del consumidor necesita. Nos esforzamos en ofrecer productos de alta calidad y efectivos, además de proporcionar la información necesaria para que el consumidor esté al tanto de su salud cutánea. 
+                      En Luz de luna buscamos ofrecer productos efectivos y ser una fuente confiable para aquellas personas que usen nuestros productos con la intención de mejorar la salud y bienestar en su piel.</p>
                 </div>
                 
             </section>
@@ -241,10 +388,10 @@
         <section class="w-full mx-auto text-center animate-flip-down mb-[10rem]">
             <h3 class="uppercase font-bold text-[40px] text-[#cb8e6acc] font-['nivea-regular'] mb-10">Hola, ¿En que te puedo ayudar?</h3>
 
-            <div class="flex justify-evenly lg:justify-center  md:gap-[150px] ld:gap-[100px]" >
+            <div class="flex justify-center gap-5  lg:justify-center  md:gap-[150px] ld:gap-[100px]" >
 
-                <div class="animate-fade-right animate-once animate-delay-[700ms] cursor-pointer flex flex-col rounded-t-full hover:bg-white/40 hover:transition-all hover:duration-[450ms]  hover:text-white " onclick="window.location.href='productos.html'" >
-                    <svg class="w-[150px] h-[150px] md:w-[200px] md:h-[200px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 865.76 682.89">
+                <div class=" animate-fade-right animate-once animate-delay-[700ms] cursor-pointer flex flex-col rounded-t-full hover:bg-white/40 hover:transition-all hover:duration-[450ms]  hover:text-white " onclick="window.location.href='productos.html'" >
+                    <svg class="mx-auto w-[150px] h-[150px] md:w-[200px] md:h-[200px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 865.76 682.89">
                         <g>
                           <g>
                             <path d="M624.82,56.09C497.02-8.74,355.87,1.04,235.35,73.98c-33.41,19.84-71.61,47.17-96.48,78.17-34.54,38.52-41.34,107.05,19.09,122.22,46.85,8.42,70.39-34.35,111.97-66.15,110.11-86.22,249.23-87.83,354.01,4.77,35.65,31.36,78.87,60.81,116.5,29.75,77.19-67.48-69.36-164.36-115.61-186.66h0Z" fill="#fff"></path>
@@ -629,7 +776,7 @@
                 </div>
 
                 <div class="animate-fade-left animate-once animate-delay-[700ms] flex flex-col cursor-pointer rounded-t-full hover:bg-white/40 hover:transition-all hover:duration-[450ms]  hover:text-white " onclick="window.location.href= 'test.html' ">
-                    <svg class="w-[150px] h-[150px] md:w-[200px] md:h-[200px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 865.76 682.89">
+                    <svg class="mx-auto w-[150px] h-[150px] md:w-[200px] md:h-[200px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 865.76 682.89">
                         <g>
                           <g>
                             <path d="M329.2,484.88l-11.87,102.46-7.58,21.29s-9.55,4.19-20.68-5.61l24.59-121.28,15.54,3.14Zm202.57-186.27s-.99,1.75-2.92,4.48c-1.04,1.48-2.37,3.26-3.94,5.19-.12,.15-.25,.3-.37,.46-7.59,9.16-20.95,21.75-39.14,25.38-1.52,.3-3.05,.58-4.59,.82-5.15,.81-10.46,1.32-15.67,.76-2.8-.3-5.7-.92-8.15-2.37-.01-.01-.03-.02-.05-.03-1.01-.6-2.02-1.39-2.63-2.36-.7-1.01-.77-2.33-.19-3.42,.67-1.26,1.57-2.39,2.65-3.32,.54-.48,1.1-.93,1.69-1.35,1.45-1.02,2.99-1.9,4.6-2.64,3.66-1.72,7.58-2.92,11.51-3.87,6.01-1.46,12.15-2.34,18.3-2.96,0,0,23.86-14.7,34.24-16.96,3.15-.67,5.05-.2,4.66,2.18h0Z"></path>
@@ -766,126 +913,287 @@
             </div>
         </section>
 
-        
-        <section class="secciones  gap-10  h-full md:w-full w-11/12 mx-auto grid ">
-
-            <div class=" flex justify-end  ">
-
-                <div class="   md:w-[42%] bg-none sombra" onclick="window.location.href = 'https://www.facebook.com';">
-                    <div class="img_section h-80 " > <!--imagen flor-->    </div>
-
-                    
-                    <div class="flex flex-col gap-4 p-5 text-white bg-black rounded-b-xl">
-                        <h2 class="font-bold first-letter:font-extrabold first-letter:text-xl">
-                            Conoce luz de luna
-                        </h2>
-                        <p class="flex items-end   ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo consequatur
-                            <span class="hover:animate-jump  hover:animate-duration-[1200ms]   " >
-                                <a href="">
-                                    <svg width="32px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.0701H22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </span>
-                        </p>
-    
-                    </div>
-
-                </div>
-            </div>
-            
-            <div class="flex ">
-
-                <div class="md:w-[42%] sombra">
-                    <div class="img_section_3 h-80 " >
-                        
-    
-    
-                    </div>
-                    <div class="flex flex-col gap-4 p-5 text-white bg-black  rounded-b-xl">
-                        <h2 class="font-bold first-letter:font-extrabold first-letter:text-xl">
-                            Tips sobre cuidado de piel
-                        </h2>
-                        <p class="flex items-end hover:cambair  ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo consequatur
-                            <span >
-                                <a href="">
-                                    <svg width="32px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.0701H22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </span>
-                        </p>
-    
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="flex justify-end">
-
-                <div class="md:w-[42%] sombra">
-
-                    <div class="img_section_2 h-80 " >
-                        
-    
-    
-                    </div>
-                    <div class="flex flex-col gap-4 p-5 text-white bg-black  rounded-b-xl">
-                        <h2 class="font-bold first-letter:font-extrabold first-letter:text-xl">
-                            Saber tipo de piel
-                        </h2>
-                        <p class="flex items-end hover:cambair  ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo consequatur
-                            <span >
-                                <a href="">
-                                    <svg width="32px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.0701H22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </span>
-                        </p>
-    
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="flex ">
-
-                <div class="md:w-[42%] sombra">
-                    <div class="img_section h-80 " >
-                        
-    
-    
-                    </div>
-                    <div class="flex flex-col gap-4 p-5 text-white bg-black  rounded-b-xl">
-                        <h2 class="font-bold first-letter:font-extrabold first-letter:text-xl">
-                            Dudas frecuentes
-                        </h2>
-                        <p class="flex items-end hover:cambair  ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo consequatur
-                            <span >
-                                <a href="">
-                                    <svg width="32px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.0701H22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                </a>
-                            </span>
-                        </p>
-    
-                    </div>
-
-                </div>
-            </div>
-
-
-            
-            
-            
+       
         </section>
+
+        <section class="rancio   mb-[10rem] mx-auto">
+
+          
+        
+        <div class="w-4/5 md:w-2/4 lg:w-1/4 mx-auto lg:flex md:justify-normal  ">
+
+            <div class=" sombra hover:scale-105 cursor-pointer transition-all duration-300">
+                <div class="img_section_3 h-80 " >
+                    
+
+
+                </div>
+                <div onclick="window.location.href= 'Tips.html' " class="flex flex-col gap-4 p-5 text-white bg-black  rounded-b-xl ">
+                    <h2 class="font-bold first-letter:font-extrabold first-letter:text-xl">
+                        Tips sobre cuidado de piel
+                    </h2>
+                    <p  class=" flex items-end hover:cambair  ">
+                      El cuidado facial es muy importante para nuestra vida diaria, hay que darle mucha importancia ya que con un buen cuidado obtendremos una piel muy saludable, aportara seguridad y autoestima .... 
+                        <span >
+                            <a " >
+                                <svg width="32px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.0701H22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 5L21.16 10C21.4324 10.2571 21.6494 10.567 21.7977 10.9109C21.946 11.2548 22.0226 11.6255 22.0226 12C22.0226 12.3745 21.946 12.7452 21.7977 13.0891C21.6494 13.433 21.4324 13.7429 21.16 14L16 19" stroke="#ffffff" stroke-width="1.|5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </a>
+                          
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    
+
+    <section class=" w-11/12   mx-auto bg-white rounded-xl  " style="padding:20px ;">
+      <h3 class="text-center font-bold text-2xl ">Dudas Frecuentes</h3>
+      
+      <div class="mt-2" class="preguntas ">
+        <div style="transition: all 300ms;  background: white;  padding: 14px; " id="" >
+          
+            <h3 style="
+              border-bottom:
+              2px solid black;
+              background: white;
+              cursor: pointer;
+              transition: 0.4s;
+              "
+              
+              
+  
+              id="pregunta_1"  class="flex justify-between font-semibold text-lg " >¿Si tengo piel grasa puedo no usar el protector solar para no sentir el rostro más grasoso?
+
+              <span>
+                <i style="transition: all 300ms;" class="fa-solid fa-plus"></i>
+
+              </span>
+  
+              
+            </h3>
+
+          
+          
+          <p id="respuesta_1" class="respuesta" style="display: none; margin-top: 10px;">No, es importante usar protector solar incluso si tienes piel grasa. Puedes optar por una formular ligera y Oil-free para evitar la sensación grasosa en el rostro. El protector solar ayuda a proteger de los dañinos rayos UV y prevenir el envejecimiento prematuro.</p>
+
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <div style="background: white;  padding: 14px; " id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_2"  class="flex justify-between font-semibold text-lg " >¿Debo tener muchos productos de cuidado facial para tener una piel bonita?
+
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+          </h3>
+          <p id="respuesta_2" class="respuesta" style="display: none; margin-top: 10px;">No necesariamente. Lo más importante es tener una rutina de cuidado facial consistente y utilizar productos adecuados para tu tipo de piel. Calidad sobre cantidad.</p>
+
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <div style="background: white;  padding: 14px; " id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_3"  class="flex justify-between font-semibold text-lg " >¿El contorno de ojos es importante?
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+          </h3>
+          <p id="respuesta_3" class="respuesta" style="display: none; margin-top: 10px;">Es importante si tienes una piel más madura ya que la piel alrededor de los ojos es mas delicada y propensa a arrugas y líneas finas. Usas contorno de ojos puede ayudar a hidratar, nutrir y reducir los signos de envejecimiento en esa área.
+          </p>
+
+        </div>
+      </div>
+
+
+      <div class="mt-2">
+        <div style="background: white;  padding: 14px; " id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_4"  class="flex justify-between font-semibold text-lg " >¿El agua micelar y el tonico facial son lo mismo?
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+
+
+          </h3>
+          <p id="respuesta_4" class="respuesta" style="display: none; margin-top: 10px;">No, el agua micelar y el tonico facial no son lo mismo. El agua micelar se utiliza para limpiar y desmaquillar la piel, mientras que el tonico facial se utiliza después de la limpieza para equilibrar el pH de la  piel y prepararla para recibir los productos de cuidado facial.
+
+          </p>
+
+        </div>
+        
+      </div>
+      <div class="mt-2">
+        <div style="background: white;  padding: 14px; " id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_5"  class="flex justify-between font-semibold text-lg " >¿Por qué es importante usar protector solar?
+
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+
+
+
+
+          </h3>
+          <p id="respuesta_5" class="respuesta" style="display: none; margin-top: 10px;">Es importante usar protector solar para proteger la piel de los dañinos rayos ultravioleta del sol, que pueden causar quemaduras, envejecimiento prematuro de la piel y aumentar el riesgo de cancer de piel.
+
+
+          </p>
+
+        </div>
+
+      </div>
+      <div class="mt-2">
+        <div style="background: white;  padding: 14px; " id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_6"  class="flex justify-between font-semibold text-lg " >¿El protector solar y el bloqueador solar son lo mismo?
+
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+
+
+
+
+          </h3>
+          <p id="respuesta_6" class="respuesta" style="display: none; margin-top: 10px;"> El bloqueador bloquea los rayos solares, crea una especia de filtro y químicos con filtros minerales que repelen la luz del sol, generalmente suelen ser mas espesos y de color blanco, en cambios los protectores solares hacen que la energía o radiación UV no se absorba del todo en la piel; suelen tener un color mas cosmético y se difuminan con el color de la piel.
+
+
+          </p>
+
+        </div>
+
+      </div>
+      <div class="mt-2">
+        <div style=" background: white;  padding: 14px; "  id="" >
+          <h3 style="
+            border-bottom:
+            2px solid black;
+            background: white;
+            cursor: pointer;
+            transition: 0.4s;
+            "
+            
+            
+
+            id="pregunta_7"  class="flex justify-between font-semibold text-lg " >¿Si soy hombre no es necesario tener una rutina de cuidado facial?
+
+            <span>
+              <i class="fa-solid fa-plus"></i>
+
+            </span>
+
+
+
+
+
+          </h3>
+          <p id="respuesta_7" class=" respuesta" style="display: none; margin-top: 10px;"> ¡Por supuesto! El genero no tiene nada que ver con el cuidado facial, todos merecemos tener una piel saludable y bonita sin importar si eres hombre o mujer. Cuida tu piel y se feliz.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <style>
+        .preguntas h3:active{
+          color: red;
+          
+        }
+        .preguntas h3:hover{
+          color: red;
+          transition: all 300ms;
+        
+        }
+        .preguntas, h3{
+          padding: 10px 0;
+          
+        }
+        .active{
+          color: red;
+        }
         
         
         
 
         
-        </main >
+       
+      </style>
 
-    <footer class="">
-        <p>Derechos reservados</p>
+
+      <div>
+        
+      </div>
+
+    </section>
+       
+    </main >
+
+    <footer class="py-5 mt-10 text-center bg-white/80">
+        <p class="font-bold">©Derechos reservados</p>
         
     </footer>
 </body>

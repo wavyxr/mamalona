@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luz de Luna -  Test</title>
     
     <link rel="stylesheet" href="/dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="icon" href="../icons/logoBgBlack.svg" type="image/png">
     
     <style>
            body{
             margin: 0;
             padding: 0;
-            background: url('/img/a.png') ;
+            background: url('/img/a.webp') ;
             background-size: cover;
             background-repeat: no-repeat;
 
@@ -42,6 +46,7 @@
         @media (max-width:768px){
             .nav{
                 display: flex;
+                width: 90%;
             }
 
             .nav_h1{
@@ -55,6 +60,31 @@
                 width: 100%;
             }
         }
+
+        @media (max-width:550px){
+          .marca{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin-top: 1.6rem;
+            cursor: pointer;            
+            
+          }
+
+        }
+
+        @media (min-width:551px){
+          .marcamd{
+            display: flex;
+          }
+        }
+
+        .activo{
+            padding-bottom: 5px;
+            border-bottom:1px solid black ;
+        }
+
             
             
     </style>
@@ -62,45 +92,50 @@
 <body >
     <header>
         
-        <div class="bg-black/90">
+        <div class="bg-black/90 relative">
+          <span class=" text-white hidden marca  justify-center items-center  cursor-pointer text-xl    font-bold  " onclick="window.location.href = 'index_2.html';">Luz de Luna</span>
 
-            <div class=" nav  max-h-20 h-20 md:max-h-32 md:max-w-full md:h-32  text-white  ">
+            <div class=" nav  max-h-20 h-20 md:max-h-32 md:max-w-full md:h-32  text-white relative ">
     
                 <h1 class="animate-fade-right animate-once animate-duration-[1300ms] nav_h1 flex w-full md:w-full md:max-h-32 ">
-                    <img src="/icons/logo.svg" onclick="window.location.href='index_2.html'" class="cursor-pointer max-h-20 h-20 md:max-h-32 md:h-32  " alt="" srcset="">
-                    <span class="flex c text-center tracking-widest  items-center text-xl justify-center  font-bold">Luz de Luna</span>
-    
-                </h1>
+                    <img src="/icons/logo.svg" height="128px" width="128px" onclick="window.location.href='index_2.html'" class="cursor-pointer max-h-20 h-20 md:max-h-32 md:h-32  " alt="Logo" srcset="">
+                    <span class="marcamd hidden text-white   items-center  cursor-pointer text-xl   font-bold  " onclick="window.location.href = 'index_2.html';" >Luz de Luna</span>
+                    
+                  </h1>
     
                 <div class="animate-fade-down animate-once animate-duration-[1300ms] hidden md:text-lg md:tracking-widest md:font-thin md:flex  md:items-center md:justify-center">
-                    <h2 class="md:flex hidden">
-                        Tipo de piel
+                    <h2 class="md:flex hidden " >
+                        Test
                     </h2>
         
                     <h2 class="  tracking-widest md:hidden items-center justify-center text-xl font-bold">Luz de Luna</h2>
     
                 </div>
     
-                <div class="animate-fade-left animate-once animate-duration-[1300ms] flex items-center w-5/12 md:w-full  justify-evenly">
-                    <a href="index.php" class="md:hover:text-xl md:transition-all">
-    
-                        <svg class="fill-white hover:fill-red-600 md:hover:w-9 md:hover:h-9 transition-all duration-300" width="34px" height="34px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z" ></path> </g></svg>
-                    </a>
-                    <a class="block text-2xl text-white" href="test.php" class="hover:text-xl transition-all">
-    
-                        <svg class="fill-white hover:fill-blue-600 hover:w-9 hover:h-9 transition-all duration-300" fill="#ffffff" width="34px" height="34px" viewBox="0 0 24 24" id="facebook" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z" ></path></g></svg>
-                        
-                    </a>
-                </div>
+                <div class=" flex justify-end w-full ml-5">
+                  
+                    <div class="animate-fade-left animate-once animate-duration-[1300ms] flex items-center w-5/12 md:w-full  justify-evenly gap-5 ">
+                        <a  target="_blank"  href="https://instagram.com/luzdeluna_oficial2023?igshid=OGQ5ZDc2ODk2ZA==" class="md:hover:text-xl md:transition-all">
+      
+                            <svg class="fill-white hover:fill-red-600 md:hover:w-9 md:hover:h-9 transition-all duration-300" width="26px" height="26px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z" ></path> </g></svg>
+                        </a>
+                        <a  target="_blank" class="block text-2xl text-white" href="https://www.facebook.com/profile.php?id=61553982506277&mibextid=gik2fB" class="hover:text-xl transition-all">
+        
+                            <svg class=" fill-white hover:fill-blue-600 hover:w-9 hover:h-9 transition-all duration-300" fill="#ffffff" width="24px" height="24px" viewBox="0 0 24 24" id="facebook" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z" ></path></g></svg>
+                            
+                        </a>
+                    </div>
+        
+                  </div>
     
     
             </div>
 
-            <nav class="bg-white border-b-1 p-4  ">
-                <ul class=" flex justify-between md:justify-evenly">
-                    <li><a class=" hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="#">Inicio</a></li>
-                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="test.html">Saber tipo de piel</a></li>
-                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="#">Acerca de nosotros</a></li>
+            <nav class="bg-white border-b-1 p-4 w-full ">
+                <ul class="grid justify-center text-center gap-5 md:flex md:justify-evenly ">
+                    <li><a class=" hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="#" onclick="window.location.href = 'index_2.html';">Inicio</a></li>
+                    <li><a class="activo hover:font-bold  hover:bg-black/10 hover:p-1.5 hover:rounded-sm transition-all duration-200 " href="test.html">Saber tipo de piel</a></li>
+                    <li><a class="hover:font-bold hover:bg-black/10 hover:p-1.5 rounded-sm transition-all duration-200 " href="Contactanos.html">Contactanos</a></li>
                 </ul>
             </nav>
 
@@ -108,6 +143,8 @@
         
      
     </header>
+
+
 
     <main class="my-5 ">
 
@@ -277,11 +314,15 @@
     
     
                 <div class="flex justify-between p-5 md:p-0 ">
-                    <input class="select-none bg-gray-400/20 w-2/5 md:w-1/3 font-semibold rounded-3xl p-3 hover:font-bold hover:p-3.5 hover:cursor-pointer transition-all duration-700 hover:bg-gray-400" type="button" value="Volver inicio" style="background-image: url('/icons/home.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center left 10px; padding-left: 30px;" onclick=" window.location.href='index_2.html';">
+                    <input  class="select-none bg-gray-400/20 w-2/5 md:w-1/3 font-semibold rounded-3xl p-3 hover:font-bold hover:p-3.5 hover:cursor-pointer transition-all duration-700 hover:bg-gray-400" type="button" value="Volver inicio" style="background-image: url('/icons/home.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center left 10px; padding-left: 30px;" onclick=" window.location.href='./index_2.html';"
+                    
+                    >
 
 
 
-                    <input class= " select-none bg-gray-400/40 w-2/5 md:w-1/3  font-semibold  rounded-3xl p-3 hover:font-bold hover:p-3.5 hover:cursor-pointer transition-all duration-700 hover:bg-gray-400" type="submit" value="Enviar" style="background-image: url('/icons/enviar.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center left 10px; padding-left: 30px;">
+                    <input class= " select-none bg-gray-400/40 w-2/5 md:w-1/3  font-semibold  rounded-3xl p-3 hover:font-bold hover:p-3.5 hover:cursor-pointer transition-all duration-700 hover:bg-gray-400" type="submit" value="Enviar" style="background-image: url('/icons/enviar.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: center left 10px; padding-left: 30px;"
+                    onclick="validar(event);"
+                    >
 
                 </div>
 
@@ -297,27 +338,47 @@
         
     </main >
 
-    <footer class="">
-        <p>Derechos reservados</p>
+    <footer class="py-5 mt-10 text-center bg-white/80">
+        <p class="font-bold">©Derechos reservados</p>
+        
     </footer>
 </body>
 
 
 
 <script>
+    function validar(event) {
+        // Obtener todos los grupos de radio
+        const gruposRadio = ['pregunta_1', 'pregunta_2', 'pregunta_3', 'pregunta_4', 'pregunta_5'];
 
+        // Iterar sobre cada grupo de radio
+        for (const grupo of gruposRadio) {
+            const opcionesSeleccionadas = document.querySelectorAll(`input[name="${grupo}"]:checked`);
+
+            // Verificar si no se ha seleccionado ninguna opción en algún grupo
+            if (opcionesSeleccionadas.length === 0) {
+                // Mostrar un mensaje de error o realizar alguna acción, como evitar el envío del formulario
+                alert(`Por favor, selecciona una opción en la pregunta ${grupo.charAt(grupo.length - 1)}.`);
+                event.preventDefault(); // Evitar el envío del formulario
+                return;
+            }
+        }
+
+        // Si todas las preguntas tienen una opción seleccionada, el formulario se enviará normalmente
+        // Aquí puedes agregar lógica adicional antes de enviar el formulario si es necesario
+    }
 
     function radios(parametro) {
-    const radioLabels = document.querySelectorAll(`input[name="${parametro}"] + label`);
+        const radioLabels = document.querySelectorAll(`input[name="${parametro}"] + label`);
 
-    radioLabels.forEach(label => {
-        label.addEventListener('click', () => {
-        // Desmarcar todas las etiquetas del grupo
-        radioLabels.forEach(l => l.classList.remove('selected'));
-        // Marcar la etiqueta seleccionada
-        label.classList.add('selected');
+        radioLabels.forEach(label => {
+            label.addEventListener('click', () => {
+                // Desmarcar todas las etiquetas del grupo
+                radioLabels.forEach(l => l.classList.remove('selected'));
+                // Marcar la etiqueta seleccionada
+                label.classList.add('selected');
+            });
         });
-    });
     }
 
     // Llamar a la función para configurar cada grupo de radio
@@ -326,7 +387,6 @@
     radios('pregunta_3');
     radios('pregunta_4');
     radios('pregunta_5');
-
 </script>
 
 
